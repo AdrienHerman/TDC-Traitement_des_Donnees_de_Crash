@@ -26,7 +26,7 @@ def version(tirets=True, center=True):
 	if center:	string += "          "
 	string += "HERMAN Adrien\n"
 	if center:	string += "       "
-	string += "Version 2.0 beta 2"
+	string += "Version 2.0 beta 3"
 	
 	if tirets:
 		string = "-------------------------------------\n" + string + "\n-------------------------------------"

@@ -7,7 +7,7 @@ Build PyQt6 *.ui files
 pyuic6 UI/MainWindow.ui -o UI/MainWindowUI.py
 
 Build py file to exe
-pyinstaller --add-data config_default.conf:. --add-data UI/icon.png:UI --add-data DATA/.:DATA/. TDC.py
+pyinstaller TDC.py
 """
 
 # Modules de Python
@@ -35,8 +35,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		
 		super().__init__(parent)
 		self.setupUi(self)              # Lancement de la fenêtre
+
 		self.connectSignalsSlots()      # Connexion des signaux
-		self.setWindowIcon(QIcon(os.getcwd() + "/UI/icon.png"))
+
+		# Chemin à ajouter dans le cas de linux
+		self.defpath = ""
+		if sys.platform == "linux":	self.defpath += "/usr/bin/"
+
+		self.setWindowIcon(QIcon(self.defpath + "UI/icon.png"))	# Icône de la fenêtre
 
 	def connectSignalsSlots(self):
 		"""
@@ -101,7 +107,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 		# Actions du menu Aide
 		#	Aide
-		self.actionAide.triggered.connect(lambda: self.open_pdf(file="help.pdf"))
+		self.actionAide.triggered.connect(lambda: self.open_pdf(file=self.defpath+"help.pdf"))
 		#	À Propos
 		self.action_APropos.triggered.connect(lambda: self.messagebox_ok(title="À Propos", text=version(tirets=False, center=False)))
 
@@ -117,7 +123,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		"""
 
 		try:
-			pyquark.filestart(file)
+			if sys.platform == "linux":	pyquark.filestart(self.defpath + file)
+			else:						pyquark.filestart(file)
 
 		except:
 			self.textEdit_terminal_addError("ERREUR : Le PDF de l'aide n'a pas pu se lancer !")
@@ -267,7 +274,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		# Activer / Désactiver les objets
 		self.changeEnabled(list_objects, self.checkBox_calc_vitesse_impact.isChecked())
 
-	def textEdit_terminal_addText(self, text):
+	def textEdit_terminal_addText(self, text=""):
 		"""
 		Ajouter du texte dans le terminal (en noir).
 
@@ -285,7 +292,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		except:
 			self.textEdit_terminal_addError("ERREUR : Format du texte reçu par le terminal incorrect !")
 
-	def textEdit_terminal_addWarning(self, text):
+	def textEdit_terminal_addWarning(self, text=""):
 		"""
 		Ajouter des warnings dans le terminal (en orange).
 
@@ -303,7 +310,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		except:
 			self.textEdit_terminal_addError("ERREUR : Format du texte reçu par le terminal incorrect !")
 
-	def textEdit_terminal_addError(self, text):
+	def textEdit_terminal_addError(self, text=""):
 		"""
 		Ajouter des erreurs dans le terminal (en rouge).
 
@@ -803,6 +810,10 @@ if __name__ == "__main__":
 	# Définition des objets application et fenêtre
 	app = QApplication(sys.argv)
 	window = MainWindow()
+	defpath = ""
+	if sys.platform == "linux":
+		print('ok')
+		defpath += "/usr/bin/"
 
 	# Définition des arguments possibles en entrée du logiciel
 	parser.add_argument("-h", "--help",
@@ -916,7 +927,7 @@ if __name__ == "__main__":
 			afficher_dep_tmps,
 			afficher_F_tmps,
 			afficher_F_dep,
-			afficher_sep] = lecture_param(path_config="config_default.conf", QWindow=None)
+			afficher_sep] = lecture_param(path_config=defpath+"config_default.conf", QWindow=None)
 
 		exec_traitement(superposer_courbes=superposer_courbes,
 						nom_fichier=nom_fichier,
