@@ -190,7 +190,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 		# Paramétrage de l'activation / désactivation
 		list_objects = [self.groupBox_enregistrement_donnees,
-						self.groupBox_traitement_donnees]
+						self.checkBox_sppr_rollback,
+						self.checkBox_recherche_deb_impact,
+						self.label_taux_augmentation,
+						self.doubleSpinBox_taux_augmentation,
+						self.label_nb_pas_avant_augmentation,
+						self.spinBox_nb_pas_avant_augmentation,
+						self.checkBox_deb_impact_manuel,
+						self.label_tmps_deb_impact,
+						self.doubleSpinBox_tmps_deb_impact,
+						self.checkBox_tarrage_dep,
+						self.checkBox_tarrage_tmps,
+						self.checkBox_detect_fin_essai,
+						self.label_dep_max,
+						self.doubleSpinBox_dep_max,
+						self.checkBox_calculer_energie,
+						self.label_fact_force,
+						self.doubleSpinBox_fact_force,
+						self.label_fact_dep,
+						self.doubleSpinBox_fact_dep]
 
 		self.changeEnabled(list_objects, state)
 
