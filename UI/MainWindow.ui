@@ -39,7 +39,7 @@
            <item>
             <widget class="QCheckBox" name="checkBox_superposer_courbes">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Superposer les courbes des données dans un même dossier ?&lt;/p&gt;&lt;p&gt;Si cette case est cochée, nom_dossier doit-être renseigné.&lt;/p&gt;&lt;p&gt;Sinon, nom_fichier doit-être renseigné.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Superposer les courbes des données dans un même dossier ?&lt;/p&gt;&lt;p&gt;Si cette case est cochée, nom_dossier doit-être renseigné.&lt;/p&gt;&lt;p&gt;Sinon, nom_fichier et nom_dossier doivent-être renseignés.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
               <string>superposer_courbes</string>
@@ -777,7 +777,7 @@
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Générer un fichier de configuration à partir de la configuration renseignée dans la fenêtre.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="text">
-             <string>Générer &quot;config.txt&quot;</string>
+             <string>Générer &quot;config.conf&quot;</string>
             </property>
            </widget>
           </item>

@@ -7,7 +7,7 @@ Build PyQt6 *.ui files
 pyuic6 UI/MainWindow.ui -o UI/MainWindowUI.py
 
 Build py file to exe
-pyinstaller TDC.py
+pyinstaller -i UI/icon.ico TDC.py
 """
 
 # Modules de Python

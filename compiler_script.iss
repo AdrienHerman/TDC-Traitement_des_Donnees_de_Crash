@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "TDC"
-#define MyAppVersion "2.0 beta 3"
+#define MyAppVersion "2.0 beta 4"
 #define MyAppPublisher "Adrien Herman"
 #define MyAppURL "https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/tree/last-stable"
 #define MyAppExeName "TDC.exe"
@@ -24,7 +24,7 @@ DisableProgramGroupPage=yes
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=C:\Users\Adrien Herman\OneDrive - rghg3787\Desktop\TDC
-OutputBaseFilename=TDC_2_0_beta3_Win64_installer
+OutputBaseFilename=TDC_2_0_beta4_Win64_installer
 SetupIconFile=C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\UI\icon.ico
 Compression=lzma
 SolidCompression=yes
