@@ -64,7 +64,7 @@ def exec_traitement(QWindow=None,
 
 	if not superposer_courbes:	# Si on affiche qu'un seul fichier de données
 		# Lecture des fichiers
-		fichiers = liste_fichier_dossier(path=nom_dossier + "/", fileType="."+type_fichier, QWindow=QWindow)
+		fichiers = liste_fichier_dossier(path=nom_dossier+"/", fileType="."+type_fichier, QWindow=QWindow)
 
 		if not nom_fichier in fichiers:
 			print_or_addterminal_message(	QWindow=QWindow,
@@ -83,7 +83,7 @@ def exec_traitement(QWindow=None,
 				F, dep = lire_contenu_csv_oscillo(lignes=lignes, QWindow=QWindow)
 
 			elif type_fichier == "txt":
-				F, dep, tmps, unite_F, unite_dep, echantillonage, date, heure = lire_fichier_txt_python(nom_fichier)
+				F, dep, tmps, unite_F, unite_dep, echantillonage, date, heure = lire_fichier_txt_python(filePath=nom_dossier+"/"+nom_fichier, QWindow=QWindow)
 
 			if F != [] and dep != []:
 				# Calcul de temps de l'essai
@@ -389,6 +389,10 @@ def exec_traitement(QWindow=None,
 								ax=ax,
 								fileName=[nom_fichier],
 								QWindow=QWindow)
+			else:
+				print_or_addterminal_message(	QWindow=QWindow,
+												type_msg="err",
+												text="exec_traitement\nERREUR : Au moins un des vecteurs Force, Déplacement ou Temps est vide !")
 
 	elif superposer_courbes:	# Si on affiche les fichiers de données d'un dossier
 		# Lecture des fichiers
@@ -428,7 +432,7 @@ def exec_traitement(QWindow=None,
 				heure = [None for i in range(nb_fichiers)]
 
 				for i in range(nb_fichiers):
-					F[i], dep[i], tmps[i], unite_F[i], unite_dep[i], echantillonage[i], date[i], heure[i] = lire_fichier_txt_python(nom_dossier + "/" + fichiers[i], QWindow=QWindow)
+					F[i], dep[i], tmps[i], unite_F[i], unite_dep[i], echantillonage[i], date[i], heure[i] = lire_fichier_txt_python(filePath=nom_dossier+"/"+fichiers[i], QWindow=QWindow)
 					if F[i] == [] and dep[i] == [] and tmps[i] == [] and unite_F[i] == "" and unite_dep[i] == "" and echantillonage[i] == .0 and date[i] == "" and heure[i] == "":
 						print_or_addterminal_message(	QWindow=QWindow,
 														type_msg="err",

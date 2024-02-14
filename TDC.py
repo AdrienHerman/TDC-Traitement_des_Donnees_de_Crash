@@ -442,7 +442,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		"""
 
 		# Récupérer le fichier
-		file = self.open_file_dialog(fileType="Fichiers Bruts CSV (*.CSV *.csv);;Fichiers Traités TXT (*.TXT *.txt)")
+		if self.comboBox_type_fichier.currentText() == "CSV":
+			file = self.open_file_dialog(fileType="Fichiers Bruts CSV (*.CSV *.csv);;Fichiers Traités TXT (*.TXT *.txt)")
+		else:
+			file = self.open_file_dialog(fileType="Fichiers Traités TXT (*.TXT *.txt);;Fichiers Bruts CSV (*.CSV *.csv)")
 
 		try:
 			# Récupération du nom du fichier et du chemin

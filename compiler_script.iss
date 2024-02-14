@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "TDC"
-#define MyAppVersion "2.0 beta 4"
+#define MyAppVersion "2.1"
 #define MyAppPublisher "Adrien Herman"
 #define MyAppURL "https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/tree/last-stable"
 #define MyAppExeName "TDC.exe"
@@ -24,8 +24,8 @@ DisableProgramGroupPage=yes
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=C:\Users\Adrien Herman\OneDrive - rghg3787\Desktop\TDC
-OutputBaseFilename=TDC_2_0_beta4_Win64_installer
-SetupIconFile=C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\UI\icon.ico
+OutputBaseFilename=TDC_2_1_Win_Install
+SetupIconFile=C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\UI\icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -37,12 +37,12 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\config_default.conf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\help.pdf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\UI\*"; DestDir: "{app}\UI"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\DATA\*"; DestDir: "{app}\DATA"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\build\TDC\_internal\*"; DestDir: "{app}\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\config_default.conf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\help.pdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\UI\*"; DestDir: "{app}\UI"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\DATA\*"; DestDir: "{app}\DATA"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Adrien Herman\Documents\Shadow Drive\INSA 5A\PLP\Python\TDC\dev\dist\TDC\_internal\*"; DestDir: "{app}\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
