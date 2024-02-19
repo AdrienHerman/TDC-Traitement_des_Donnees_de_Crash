@@ -31,7 +31,7 @@ Ensuite, vous pouvez lancer l'exécutable. Une fenêtre d’installation s’ouv
 
 Suivez maintenant les instructions affichées à l’écran. Puis cliquer sur installer. Le processus d’installation se lance. Il dure moins d’une minute (selon les capacités de votre ordinateur).
 
-<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/insatallation_en_cours.png" width="350">
+<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/installation_en_cours.png" width="350">
 
 Une fois l’installation terminée, vous pouvez cliquer sur le bouton "Terminer" et le logiciel se lance.
 
