@@ -39,7 +39,7 @@ Une fois l’installation terminée, vous pouvez cliquer sur le bouton "Terminer
 
 Le logiciel se lance. Lorsqu’il démarre, deux fenêtres s’ouvrent : une invite de commande à ne pas fermer (les erreurs internes s'afficherons dedans). Puis une interface dont l’utilisation est décrite dans la section suivante.
 
-<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/interface.png" height="350">
+<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/interface.png" height="500">
 
 ## Utilisation en lignes de commandes
 ```
