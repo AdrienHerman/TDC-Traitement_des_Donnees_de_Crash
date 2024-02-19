@@ -3,7 +3,7 @@
 # TDC - Traitement des Données de Crash
 Logiciel de traitement des données de crash. Projet réalisé dans le cadre du projet de fin d'étude PLP23INT16 à l'INSA Hauts-de-France. Ce logiciel a été développé dans le but de filtrer et d’afficher des données de crash.
 
-<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/courbe.png" height="350">
+<img src="https://github.com/AdrienHerman/TDC-Traitement_des_Donnees_de_Crash/blob/last-stable/ressources/courbe.svg" height="350">
 
 ## Dépendances
 Les modules python nécessaires au bon fonctionnement du code de génération des structures sont les suivants :
